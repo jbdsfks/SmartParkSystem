@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/park</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.pool_size">1</property>
+    -->
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="show_sql">true</property>
+    <mapping class="com.njust.smartparksystem.domain.Car"/>
+    <mapping resource="com/njust/smartparksystem/domain/Car.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.CarOwner"/>
+    <mapping resource="com/njust/smartparksystem/domain/CarOwner.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.Park"/>
+    <mapping resource="com/njust/smartparksystem/domain/Park.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.ParkOwner"/>
+    <mapping resource="com/njust/smartparksystem/domain/ParkOwner.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.ParkkingRecord"/>
+    <mapping resource="com/njust/smartparksystem/domain/ParkkingRecord.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.Recharge"/>
+    <mapping resource="com/njust/smartparksystem/domain/Recharge.hbm.xml"/>
+    <mapping class="com.njust.smartparksystem.domain.User"/>
+    <mapping resource="com/njust/smartparksystem/domain/User.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
