@@ -5,11 +5,23 @@
 <hibernate-mapping>
 
     <class name="com.njust.smartparksystem.domain.User" table="user" schema="park">
-        <id name="id" column="id"/>
-        <property name="name" column="name"/>
-        <property name="password" column="password"/>
-        <property name="money" column="money"/>
-        <property name="type" column="type"/>
-        <property name="phone" column="phone"/>
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="decimal(6,2) unsigned zerofill" precision="6" scale="2"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar(12)" length="12" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

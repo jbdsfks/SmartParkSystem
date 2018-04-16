@@ -16,8 +16,16 @@ public class User {
     private Integer type;
     private String phone;
 
+    public User(){
+
+    }
+    public User(String id, String password){
+        this.id = id;
+        this.password = password;
+    }
+
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, length = 32)
     public String getId() {
         return id;
     }
@@ -27,7 +35,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "name")
+    @Column(name = "name", nullable = false, length = 32)
     public String getName() {
         return name;
     }
@@ -37,7 +45,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "password")
+    @Column(name = "password", nullable = false, length = 32)
     public String getPassword() {
         return password;
     }
@@ -47,7 +55,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "money")
+    @Column(name = "money", nullable = false, precision = 2)
     public BigDecimal getMoney() {
         return money;
     }
@@ -57,7 +65,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "type", nullable = true)
     public Integer getType() {
         return type;
     }
@@ -67,7 +75,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "phone")
+    @Column(name = "phone", nullable = true, length = 12)
     public String getPhone() {
         return phone;
     }
