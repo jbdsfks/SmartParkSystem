@@ -50,7 +50,6 @@
             }).blur(function() {
                 $('#owl-login').removeClass('password');
             });
-
             //简单登录操作
             $("#doLogin").click(function (e) {
                 $.ajax({
@@ -64,9 +63,9 @@
                     success : function(data) {
                         if (data.result == "200") {
                             alert(data.msg);
-                            alert(data.user_id+" "+data.user_password);
+                            alert(data.user_id+" "+data.user_name);
                         } else {
-                            alert("账号密码不能为空！");
+                            alert(data.msg);
                         }
                     }
                 });
