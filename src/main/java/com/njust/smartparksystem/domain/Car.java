@@ -15,7 +15,7 @@ public class Car {
     private String brand;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, length = 32)
     public String getId() {
         return id;
     }
@@ -25,7 +25,7 @@ public class Car {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "type", nullable = false, length = 32)
     public String getType() {
         return type;
     }
@@ -35,7 +35,7 @@ public class Car {
     }
 
     @Basic
-    @Column(name = "model")
+    @Column(name = "model", nullable = false)
     public int getModel() {
         return model;
     }
@@ -45,7 +45,7 @@ public class Car {
     }
 
     @Basic
-    @Column(name = "color")
+    @Column(name = "color", nullable = false, length = 32)
     public String getColor() {
         return color;
     }
@@ -55,7 +55,7 @@ public class Car {
     }
 
     @Basic
-    @Column(name = "brand")
+    @Column(name = "brand", nullable = false, length = 32)
     public String getBrand() {
         return brand;
     }

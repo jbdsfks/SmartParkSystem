@@ -5,10 +5,20 @@
 <hibernate-mapping>
 
     <class name="com.njust.smartparksystem.domain.Car" table="car" schema="park">
-        <id name="id" column="id"/>
-        <property name="type" column="type"/>
-        <property name="model" column="model"/>
-        <property name="color" column="color"/>
-        <property name="brand" column="brand"/>
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+        </id>
+        <property name="type">
+            <column name="type" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="model">
+            <column name="model" sql-type="int(11)"/>
+        </property>
+        <property name="color">
+            <column name="color" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="brand">
+            <column name="brand" sql-type="varchar(32)" length="32"/>
+        </property>
     </class>
 </hibernate-mapping>
